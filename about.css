@@ -1,0 +1,294 @@
+html, body {
+    height: 100%;    
+    width: 100%;   
+    overflow-x: hidden;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.background {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("aboutsunset.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(10px); 
+    z-index: -9;   
+
+}
+    
+/* SQUARE HEADING START */
+
+.squareheading {
+    width: 100%;
+    height: 135px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 0%;
+    
+    }
+    
+    /* SQUARE HEADING END */
+
+/* name1&2 START */
+
+.name1, .name2 {
+    position: absolute;
+    letter-spacing: 5px;
+    font-family: "Numans", 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+    color: white;
+    z-index: 5;
+}
+
+.name1 {
+    font-size: 20px;
+    top: 3px;
+    left: 4%;
+}
+
+.name2 {
+    font-size: 15px;
+    top: 6%;
+    left: 4%;
+}
+
+@media (max-width: 1365px) and (max-height: 953px) {
+    .name1 {
+        font-size: 18px;
+        letter-spacing: 4px;
+        top: 2%;
+        left: 3%;
+    }
+
+    .name2 {
+        font-size: 14px;
+        top: 7%;
+        left: 3%;
+    }
+}
+
+@media (max-width: 600px) {
+    .name1 {
+        font-size: 2vw; 
+        letter-spacing: 3px;
+        top: 10vw;
+        left: 4vw;
+    }
+
+    .name2 {
+        font-size: 2vw; 
+        top: 15vw;
+        left: 4vw;
+    }
+}
+
+/* name1&2 END */
+
+/* HEADER BUTTONS START */
+.header-buttons {
+    display: flex;
+    gap: 20px; 
+    position: absolute;
+    top: 5%;
+    right: 5%; 
+    z-index: 10; 
+}
+
+.ABOUTME, .CONTACT {
+    font-size: 10px;
+    background-color: white;
+    transition: 0.2s;
+    border-radius: 25px;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.ABOUTME:hover, .CONTACT:hover {
+    background-color: rgb(0, 238, 255);
+    transform: scale(1.1);
+}
+
+.ABOUTME a, .CONTACT a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.ABOUTME a:hover, .CONTACT a:hover {
+    color: rgb(68, 0, 255);
+}
+
+@media (max-width: 1365px) and (max-height: 953px) {
+    .header-buttons {
+        top: 4.5%;
+        right: 6%;
+    }
+
+    .ABOUTME, .CONTACT {
+        font-size: 0.9vw;
+    }
+
+    .ABOUTME a, .CONTACT a {
+        font-size: 0.9vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-buttons {
+        top: 4%; 
+        right: 5%; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .ABOUTME, .CONTACT {
+        font-size: 2.5vw;
+    }
+
+    .ABOUTME a, .CONTACT a {
+        font-size: 1vw;
+    }
+}
+/* HEADER BUTTONS END */
+
+/* BOTTOM HEADER START */
+.bottom-header {
+    width: 100%; 
+    position: absolute; 
+    bottom: 0px; 
+    left: 0;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+@media (max-width: 600px) {
+    .bottom-header {
+        bottom: 0px;
+    }
+    body {
+        height: 100%;
+    }
+    }
+
+.bottom-header p {
+    font-family: "Numans",'Courier New', Courier, monospace;
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Archivo Black",'Courier New', Courier, monospace;
+    transition: color 0.3s;
+    transition: 0.2s;
+    font-weight: lighter;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+.social-media a:hover {
+    color: rgb(68, 0, 255);
+    background: white;
+    border-radius: 10px;
+    padding: 3px;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .social-media {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+    .social-media a {
+        font-size: 18px;
+    }
+
+/* BOTTOM HEADER END */
+
+/* ABOUT START */
+.about {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    background-color: #0000008e;
+    width: 80%; 
+    border-radius: 10px;
+    transition: width 0.3s ease; 
+}
+
+.about h1 {
+    font-size: 2.5vw; 
+    margin: 0 0 10px;
+    text-align: center;
+    color: #fff;
+    font-family: "Numans", 'Courier New', Courier, monospace;
+}
+
+.about p {
+    font-size: 1.8vw; 
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Numans", 'Courier New', Courier, monospace;
+}
+
+
+@media (max-width: 800px) {
+    .about {
+        width: 90%; 
+    }
+
+    .about h1 {
+        font-size: 4vw; 
+    }
+
+    .about p {
+        font-size: 3.2vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        width: 95%; 
+        top: 50%;
+    }
+
+    .about h1 {
+        font-size: 4vw;
+    }
+
+    .about p {
+        font-size: 3vw;
+    }
+
+}
+
+/* ABOUT END */
